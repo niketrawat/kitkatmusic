@@ -42,7 +42,7 @@ async def start_comm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             await message.reply_sticker(
-            return await message.reply_photo(
+            return await message.reply_photo("")
                        photo=config.START_IMG_URL,
                        caption=_["help_1"], reply_markup=keyboard
             )
@@ -190,7 +190,7 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_sticker(
+                await message.reply_sticker("")
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
